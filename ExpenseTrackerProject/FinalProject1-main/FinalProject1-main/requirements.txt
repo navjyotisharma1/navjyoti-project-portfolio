@@ -1,0 +1,20 @@
+asgiref==3.8.1
+Django==4.1.7
+django-crispy-forms==1.12.0
+django-filter==21.1
+django-widget-tweaks==1.4.8
+pillow==11.1.0
+sqlparse==0.5.3
+tzdata==2024.2
+
+
+# Dependency	                            Purpose
+
+# asgiref	                                Enables Django's async features
+# Django	                                Web framework for Python
+# django-crispy-forms	                    Enhances form rendering with Bootstrap
+# django-filter	                        Provides filtering for querysets
+# django-widget-tweaks	                Customizes form widgets in templates
+# pillow	                                Handles image processing in Django
+# sqlparse	                            Formats SQL queries
+# tzdata	                                Provides timezone support

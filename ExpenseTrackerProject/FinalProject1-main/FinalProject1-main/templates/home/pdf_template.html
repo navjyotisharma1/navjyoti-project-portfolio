@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Report</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Expense Report</h2>
+
+    <p>Data Check: 
+        {% for expense in expenses %}
+            | {{ expense.add_money }} |
+        {% empty %}
+            No Expenses Found.
+        {% endfor %}
+    </p> 
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for expense in expenses %}
+            <tr>
+                <td>{{ expense.add_money }}</td>
+                <td>{{ expense.quantity }}</td>
+                <td>{{ expense.Category.name }}</td>
+                <td>{{ expense.Date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No expenses found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
